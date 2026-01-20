@@ -12,12 +12,24 @@
   default: true;
   --color-primary: #403f3f;
   --color-secondary: #d72050;
-  --color-base-50:#706F6F;
-  --color-base-200:#f3f3f3;
-  --color-base-300:#e7e7e7
+  --color-base-400: #9f9f9f;
+  --color-base-200: #f3f3f3;
+  --color-base-300: #e7e7e7
 }
 
 
 @theme {
   --font-sans: "Poppins", sans-serif;;
+}
+/* 
+a.active {
+  @apply bg-base-300, 
+} */
+
+a.active{
+  @apply bg-base-300
+ 
+}
+a.active{
+  @apply text-black
 }
