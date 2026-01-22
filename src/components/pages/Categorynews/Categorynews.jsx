@@ -8,11 +8,12 @@ const Categorynews = () => {
     const { id } = useParams();
     const newsData = useLoaderData()
     const [cetagoryNews, setCetagoryNews] = useState([])
+    
     // console.log(newsData)
     // console.log(id)
 
     useEffect(() => {
-
+         
         if (id == '0') {
             setCetagoryNews(newsData);
             return;
@@ -29,16 +30,21 @@ const Categorynews = () => {
 
 
     }, [newsData, id])
+
+
     return (
         <div>
             <h1 className='font-bold'>Dragon News Home</h1>
-            {cetagoryNews.length}
+            
 
             <div>
                 {
                     cetagoryNews.map(news=><Newscard kew={news.category_id} news={news}></Newscard>)
                 }
+                
+             
             </div>
+            
         </div>
     );
 };
