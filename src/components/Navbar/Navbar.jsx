@@ -20,7 +20,7 @@ const Navbar = () => {
                         <img src={user} />
                     </div>
                 </div>
-                <Link to='/auth/login' className='btn btn-primary px-10'>Log In</Link>
+                <Link to='/auth/register' className='btn btn-primary px-10'>Log In</Link>
             </div>
         </div>
     );

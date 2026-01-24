@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Login = () => {
     return (
         <div>
+           <Link to='/auth/register'> re</Link>
             <div className="min-h-screen bg-[#f5f5f5] flex items-center justify-center px-4">
                 <div className="w-full max-w-xl bg-white rounded-lg shadow-sm p-10">
                     <h1 className="text-3xl font-semibold text-center text-gray-800">
@@ -43,9 +45,9 @@ const Login = () => {
 
                     <p className="text-center text-sm text-gray-500 mt-6">
                         Don’t Have An Account ?
-                        <a href="#" className="text-red-500 ml-1 font-medium">
+                        <Link to="/auth/signup" className="text-red-500 ml-1 font-medium">
                             Register
-                        </a>
+                        </Link>
                     </p>
                 </div>
             </div>
