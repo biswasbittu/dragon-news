@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Outlet } from 'react-router';
 import Header from '../../components/Header/Header';
 import Latestnews from '../../components/Latestnews/Latestnews';
@@ -19,13 +19,13 @@ const Root = () => {
                 </nav>
             </header>
             <main className='w-11/12 mx-auto my-3  grid grid-cols-12 gap-4'>
-                <aside className='col-span-3'>
+                <aside className='col-span-3 sticky h-fit top-0'>
                     <Leftaside></Leftaside>
                 </aside>
                 <section className=" col-span-6">
                     <Outlet></Outlet>
                 </section>
-                <aside className='col-span-3'>
+                <aside className='col-span-3 sticky h-fit top-0'>
                     <Rightaside/>
                 </aside>
 
