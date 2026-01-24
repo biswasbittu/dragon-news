@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const Login = () => {
     return (
         <div>
-           <Link to='/auth/register'> re</Link>
+           
             <div className="min-h-screen bg-[#f5f5f5] flex items-center justify-center px-4">
                 <div className="w-full max-w-xl bg-white rounded-lg shadow-sm p-10">
                     <h1 className="text-3xl font-semibold text-center text-gray-800">

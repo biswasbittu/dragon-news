@@ -29,14 +29,16 @@ export const router = createBrowserRouter([
     path:'/auth',
     element: <Authlayout/>,
     children:[
+      
       {
         path:'/auth/login',
         element:<Login></Login>
       },
       {
-        path:'/auth/register',
+        path:'/auth/signup',
         element:<Signup></Signup>
-      }
+      },
+      
     ]
   }
 ]);
