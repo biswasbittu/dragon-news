@@ -1,10 +1,11 @@
 import React from 'react';
 import { FaRegBookmark } from 'react-icons/fa';
 import { IoShareSocialOutline } from 'react-icons/io5';
+import { Link } from 'react-router';
 
 const NewsCard = ({ news }) => {
   // আপনার ডেটা থেকে প্রয়োজনীয় অংশগুলো বের করে নেওয়া হচ্ছে
-  const { title, image_url, thumbnail_url, details, rating, total_view, author } = news || {};
+  const { id,title, image_url, thumbnail_url, details, rating, total_view, author } = news || {};
 
   return (
     <div className="card w-full bg-base-100 shadow-xl border border-gray-200 rounded-lg overflow-hidden my-4">
@@ -51,7 +52,7 @@ const NewsCard = ({ news }) => {
 
         <p className="text-gray-500 text-base leading-relaxed">
           {details?.length > 200 ? details.slice(0, 200) : details}... 
-          <span className="text-orange-500 font-bold cursor-pointer ml-1">Read More</span>
+          <Link to={`/newsdetails/${id}`} className="text-orange-500 font-bold cursor-pointer ml-1">Read More</Link>
         </p>
       </div>
 

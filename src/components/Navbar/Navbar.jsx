@@ -8,7 +8,7 @@ import button from 'daisyui/components/button';
 const Navbar = () => {
     const {user,logOut} =use(AuthContext)
     const handleLogOut = ()=>{
-        console.log('user logout')
+        
         logOut().then(()=>alert('Log Out')).catch(error=>error)
     }
     return (

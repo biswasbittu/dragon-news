@@ -1,14 +1,27 @@
 import React from 'react';
+import { use } from 'react';
 import { Link } from 'react-router';
+import { AuthContext } from '../../../AuthProvider/AuthProvider';
 
 const Login = () => {
+
+    const {SignIn,setUser} =use(AuthContext)
     const handleLogin = (e) => {
         e.preventDefault();
          const form = e.target
          const email=form.email.value;
          const password =form.password.value 
 
-        console.log('log in button work succefully')
+        // console.log(email,password)
+        SignIn(email,password).then((result)=>{
+            const user = result.user
+            setUser(user)
+            // console.log(user)
+        }).catch(error=>{
+            alert("Wrong User")
+            console.log(error.message)
+        })
+
     }
     return (
         <div>
