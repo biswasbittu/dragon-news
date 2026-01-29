@@ -13,6 +13,8 @@ const Navbar = () => {
     }
     return (
         <div className=' flex justify-between items-center'>
+            <div className=' bg-amber-500 border-2 w-36 font-bold rounded-4xl  text-center text-white'>{user && user.displayName} </div>
+
             <div className='flex gap-8 text-gray-500'>
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='/about'>About</NavLink>
@@ -21,7 +23,6 @@ const Navbar = () => {
 
             </div>
             <div className='flex items-center gap-4'>
-            <div className=' bg-amber-500 border-2 w-36 font-bold rounded-4xl  text-center text-white'>{user && user.displayName} </div>
 
                 <div className="avatar">
                     <div className="w-16 rounded-full">

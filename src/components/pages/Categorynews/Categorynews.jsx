@@ -39,7 +39,7 @@ const Categorynews = () => {
 
             <div>
                 {
-                    cetagoryNews.map(news=><Newscard kew={news.category_id} news={news}></Newscard>)
+                    cetagoryNews.map(news=><Newscard key={news.id} news={news}></Newscard>)
                 }
                 
              

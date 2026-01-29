@@ -25,9 +25,10 @@ const Signup = () => {
                     setUser({ ...user, displayName: name, photoURL: photo });
                     navigate('/')
                 }).catch((error) => {
+                    
                     // An error occurred
                     // ...
-                    console.log(error)
+                    // console.log(error)
                     setUser(user)
                 })
 
