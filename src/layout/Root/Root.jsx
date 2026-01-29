@@ -13,7 +13,7 @@ const Root = () => {
         <div className='container mx-auto'>
             <header className='mt-8'>
                 <Header />
-                {import.meta.env.VITE_name}
+                
                 <section className='w-11/12 mx-auto my-3'>
                     <Latestnews />
                 </section>

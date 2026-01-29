@@ -28,7 +28,7 @@ const Signup = () => {
                     
                     // An error occurred
                     // ...
-                    // console.log(error)
+                    console.log(error)
                     setUser(user)
                 })
 
