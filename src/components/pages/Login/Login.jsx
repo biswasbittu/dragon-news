@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { use } from 'react';
-import { Link } from 'react-router';
+import { Link, useLocation } from 'react-router';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
+import { useNavigate } from 'react-router';
 
 const Login = () => {
-
-    const {SignIn,setUser} =use(AuthContext)
+    const [error,seterror]=useState("")
+    const {SignIn,setUser} =use(AuthContext);
+    const location =useLocation();
+    const navigate = useNavigate()
+    // console.log(error)
     const handleLogin = (e) => {
         e.preventDefault();
          const form = e.target
@@ -16,10 +20,12 @@ const Login = () => {
         SignIn(email,password).then((result)=>{
             const user = result.user
             setUser(user)
+            navigate(`${location.state ? location.state : '/'}`)
             // console.log(user)
         }).catch(error=>{
-            alert("Wrong User")
-            console.log(error.message)
+            // alert("Wrong User")
+            // console.log(error.message)
+            seterror(error.code)
         })
 
     }
@@ -61,7 +67,7 @@ const Login = () => {
                                 required
                             />
                         </div>
-
+                             {error && <p className='text-red-500'>{error}</p>}
                         <button className="btn w-full bg-gray-700 hover:bg-gray-800 text-white border-none mt-4">
                             Login
                         </button>

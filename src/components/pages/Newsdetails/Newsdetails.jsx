@@ -10,7 +10,7 @@ const Newsdetails = () => {
     const [news,setNews]=useState({})
     // console.log(news)
     useEffect(()=>{
-        const newsDetails= data.find(singleNews=>singleNews.id == id)
+        const newsDetails= data.find(singleNews=>singleNews.id == id);
         setNews(newsDetails)
     },[data,id])
     return (
@@ -23,7 +23,7 @@ const Newsdetails = () => {
                 <h2 className='font-bold'>Dragon News</h2>
                 <Newsdetailscard key={news.id} news={news}/>
             </section>
-            <aside className='col-span-3 sticky top-0 h-fit'>
+            <aside className='col-span-3 '>
                 <Rightaside/>
             </aside>
 
